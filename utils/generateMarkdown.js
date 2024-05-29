@@ -97,10 +97,12 @@ function generateMarkdown(data) {
         ${data.credits}
         
         ## License
-        ${renderLicenseSection}
+        ${renderLicenseLink};
 
-        ${renderLicenseBadge}
+        ${renderLicenseSection};
+
+        ${renderLicenseBadge};
 `;
 }
 
-module.exports = generateMarkdown;
+export {generateMarkdown};
