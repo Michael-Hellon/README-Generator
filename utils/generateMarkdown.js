@@ -35,14 +35,14 @@ function renderLicenseLink(license) {
         default:
             return ""
     }
-
+    
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
     if (license !== undefined) {
-        return `Please click on the badge below to read information about the ${data.license} license.`;
+        return `Please click on the badge below to read information about the ${license} license.`;
     } else{
         return "";
     } 
@@ -50,59 +50,56 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+  # ${data.title}
 
   ## Description
-        ${data.description}
+  ${data.description}
+  - ${data.motivation}
+  - ${data.build}
+  - ${data.problem}
+  - ${data.learned}
+  
+  ${data.license}
 
-        - ${data.motivation}
-        - ${data.build}
-        - ${data.problem}
-        - ${data.learned}
+  ## Table of contents
 
-        ## Table of contents
-        * [Installation](#installation)
-        * [Usage](#usage)
-        * [Contributing](#contribute)
-        * [Tests](#test)
-        * [Questions](#question)
-        * [License](#license) 
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contribute](#contribute)
+  * [Test](#test)
+  * [Questions](#questions)
+  * [License](#license) 
         
     
-        ## Installation
-        ${data.installation}
+  ## Installation
+  ${data.installation}
 
-        ## Usage
-        ${data.usage}
+  ## Usage
+  ${data.usage}
 
-        Here is the link to watch the demo of the application </asset/video/demoVideo
-
-        ## License
-        ${data.license}
-
-        ## How to Contribute to this project
-        ${data.contribute}
+  ## Contribute
+  ${data.contribute}
         
-        ## Tests
-        ${data.test}
+  ## Test
+  ${data.test}
 
-        ## Questions
-        My Github profile can be located at <https://github.com/${data.userName}/>
+  ## Questions
+  My Github profile can be located at <https://github.com/${data.userName}/>
 
-        You can email me with any questions at ${data.email}
+  You can email me with any questions at ${data.email}
 
-        ![screenshot](/assets/images/${screenshot})
+  ![screenshot](/assets/images/${data.screenshot})
 
-        ## Credits
-        ${data.credits}
+  ## Credits
+  ${data.credits}
         
-        ## License
-        ${renderLicenseLink};
+  ## License
 
-        ${renderLicenseSection};
+  ${renderLicenseSection(data.license)};
 
-        ${renderLicenseBadge};
-`;
+  ${renderLicenseBadge(data.license)};
+  `;
 }
 
 export {generateMarkdown};

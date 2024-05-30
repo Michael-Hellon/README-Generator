@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import inquirer from 'inquirer';
+import colors from 'colors';
 
 import {generateMarkdown} from "./utils/generateMarkdown.js";
 
@@ -88,12 +89,6 @@ const questions = [
   }, 
 ]  
 
-inquirer
-  .prompt( [
-    questions
-  ] 
-)
-  .then((data) => {
 
   function writeToFile(response) {
     // creates a new folder called New_README_Folder to save the newly generated README.md into
@@ -103,16 +98,17 @@ inquirer
         err ? console.log(colors.bgBrightRed(err)) : console.log(colors.bgBrightGreen("success! You README.md file has been generated and is in New_README_Folder."))
     );
   };
-});
 
-const response = "";
-function init() {
-  if (response = inquirer.prompt(questions)) {
+async function init() {
+  try {
+    const response = await inquirer.prompt(questions);
+    // response.licenseBadge = licenseBadge(response.license);
     writeToFile(response)
-
-  } else (err) => {
-    throw err;
+    
+  }catch (err) { 
+      throw err;
   }
+
 }
 
 init();
