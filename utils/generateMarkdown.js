@@ -3,15 +3,15 @@
 function renderLicenseBadge(license) {
     switch (license){
         case "MIT license":
-            return "[![License: MIT]](https://img.shields.io/badge/License-MIT-green.svg)]"; 
+            return "[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)";
         case "Apache License 2.0":
-            return "[![License]](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]"; 
+            return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
         case "GNU General Public License v3.0":
-            return "[![License: GPL v3]](https://img.shields.io/badge/License-GPLv3-blue.svg)]";
+            return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://opensource.org/license/gpl-3-0/)";
         case "Mozilla Public License 2.0":
-            return "[![License: MPL 2.0]](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]";
+            return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
         case "The Unlicense":
-            return "[![License]](https://img.shields.io/badge/License-Unlicense-green.svg)]";
+            return "[![License](https://img.shields.io/badge/License-Unlicense-green.svg)](https://opensource.org/license/unlicense)";
         default:
             return "";
     }
@@ -23,7 +23,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
     switch (license){
         case "MIT license":
-            return "[![License: MIT]](https://opensource.org/licenses/MIT)";
+            return "(https://opensource.org/licenses/MIT)";
         case "Apache License 2.0":
             return "[![License]](https://opensource.org/licenses/Apache-2.0)";
         case "GNU General Public License v3.0":
@@ -42,7 +42,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
     if (license !== undefined) {
-        return `Please click on the badge below to read information about the ${license} license.`;
+        return `Please click on the license name to read more about the ${license} license.`;
     } else{
         return "";
     } 
@@ -60,7 +60,7 @@ function generateMarkdown(data) {
   - ${data.problem}
   - ${data.learned}
   
-  ${(data.license)}
+  ${renderLicenseBadge(data.license)}
 
 
   ## Table of contents
@@ -97,9 +97,9 @@ function generateMarkdown(data) {
         
   ## License
 
-  ${renderLicenseSection(data.license)};
+  ${renderLicenseSection(data.license)}
 
-  ${renderLicenseBadge(data.license)};
+  ${renderLicenseBadge(data.license)}
   `;
 }
 
