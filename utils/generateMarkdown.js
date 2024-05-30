@@ -3,15 +3,15 @@
 function renderLicenseBadge(license) {
     switch (license){
         case "MIT license":
-            return "[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)]"; 
+            return "[![License: MIT]](https://img.shields.io/badge/License-MIT-green.svg)]"; 
         case "Apache License 2.0":
-            return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]"; 
+            return "[![License]](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]"; 
         case "GNU General Public License v3.0":
-            return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]";
+            return "[![License: GPL v3]](https://img.shields.io/badge/License-GPLv3-blue.svg)]";
         case "Mozilla Public License 2.0":
-            return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]";
+            return "[![License: MPL 2.0]](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]";
         case "The Unlicense":
-            return "[![License](https://img.shields.io/badge/License-Unlicense-green.svg)]";
+            return "[![License]](https://img.shields.io/badge/License-Unlicense-green.svg)]";
         default:
             return "";
     }
@@ -60,7 +60,8 @@ function generateMarkdown(data) {
   - ${data.problem}
   - ${data.learned}
   
-  ${data.license}
+  ${(data.license)}
+
 
   ## Table of contents
 
