@@ -3,15 +3,15 @@
 function renderLicenseBadge(license) {
     switch (license){
         case "MIT license":
-            return "[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)";
+            return "![License](https://img.shields.io/badge/License-MIT-green.svg)";
         case "Apache License 2.0":
-            return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+            return "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
         case "GNU General Public License v3.0":
-            return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://opensource.org/license/gpl-3-0/)";
+            return "![License](https://img.shields.io/badge/License-GPLv3-blue.svg)";
         case "Mozilla Public License 2.0":
-            return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+            return "![License](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)";
         case "The Unlicense":
-            return "[![License](https://img.shields.io/badge/License-Unlicense-green.svg)](https://opensource.org/license/unlicense)";
+            return "![License](https://img.shields.io/badge/License-Unlicense-green.svg)";
         default:
             return "";
     }
@@ -23,26 +23,29 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
     switch (license){
         case "MIT license":
-            return "(https://opensource.org/licenses/MIT)";
+            return "[License: MIT](https://opensource.org/licenses/MIT)";
         case "Apache License 2.0":
-            return "[![License]](https://opensource.org/licenses/Apache-2.0)";
+            return "[License: Apache 2.0](https://opensource.org/licenses/Apache-2.0)";
         case "GNU General Public License v3.0":
-            return "[![License: GPL v3]](https://opensource.org/license/gpl-3-0/)";
+            return "[License: GPL v3](https://opensource.org/license/gpl-3-0/)";
         case "Mozilla Public License 2.0":
-            return "[![License: MPL 2.0]](https://opensource.org/licenses/MPL-2.0)";
+            return "[License: MPL 2.0](https://opensource.org/licenses/MPL-2.0)";
         case "The Unlicense":
-            return "[![License]](https://opensource.org/license/unlicense)";
+            return "[License: Unlicense](https://opensource.org/license/unlicense)";
         default:
             return ""
     }
     
 }
 
+return "![License: Apache 2.0](https://opensource.org/licenses/Apache-2.0)";
+
+
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
     if (license !== undefined) {
-        return `Please click on the license name to read more about the ${license} license.`;
+        return `To read more about the ${license}, click here ==> ${renderLicenseLink(license)}.`;
     } else{
         return "";
     } 
