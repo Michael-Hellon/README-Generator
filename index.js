@@ -10,7 +10,7 @@ const questions = [
   {
     type: "input",
     message: "Enter a Title for your Project. ",
-    name: "title", 
+    name: "title",
   },
   {
     type: "input",
@@ -41,6 +41,7 @@ const questions = [
     type: "input",
     message: "What are the Installation Instructions?",
     name: "installation",
+    default: "To start with, clone the repository from GitHub into your computer's local repository."
   },
   {
     type: "input",
@@ -50,19 +51,20 @@ const questions = [
   {
     type: "list",
     message: 'What license type do you want to use for this project? (Use the up/down arrow keys to select, then press ENTER)',
-    name: 'license',
+    name: "license",
     choices: [
       "MIT license", 
       "Apache License 2.0", 
       "GNU General Public License v3.0",
       "Mozilla Public License 2.0",
       "The Unlicense",
-    ]
+      ],
   },
   {
     type: "input",
     message: "How does someone contribute to this project?",
     name: "contribute",
+    default: "If you would like to contribute to this project, please see below for my contact information."
   },
   {
     type: "input",
@@ -71,13 +73,15 @@ const questions = [
   },
   {
     type: "input",
-    message: "Please enter your GitHub username.",
+    message: "Please enter your GitHub username. Default is Michael-Hellon",
     name: "userName",
+    default: "Michael-Hellon"
   },
   {
     type: "input",
-    message: "What is your email address?",
+    message: "What is your email address? Default is mwhellon@yahoo.com",
     name: "email",
+    default: "mwhellon@yahoo.com"
   },
   {
     type: "input",
@@ -86,8 +90,9 @@ const questions = [
   },    
   {
     type: "input",
-    message: "What is the FILE NAME for the screenshot?",
+    message: "What is the FILE NAME for the screenshot? Default is screenshot.png",
     name: "screenshot",
+    default: "screenshot.png",
   }, 
 ]  
 
