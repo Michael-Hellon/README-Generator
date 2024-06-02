@@ -66,12 +66,12 @@ ${renderLicenseBadge(data.license)}
 
 ## Table of contents
 
-  [Installation](#installation)
-  [Usage](#usage)
-  [Contribute](#contribute)
-  [Test](#test)
-  [Questions](#questions)
-  [License](#license)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contribute](#contribute)
+*  [Test](#test)
+* [Questions](#questions)
+* [License](#license)
 
 ## Installation
 
