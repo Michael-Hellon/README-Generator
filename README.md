@@ -9,17 +9,17 @@ This project will build the user a Professional README.md file. The user will be
 - I built this project to help save time creating a professional quality README.
 - This project solved the problem of spending lots of time building and formatting a new README file for each project.
 - I learned several things from doing this challenge and had lot of fun developing it. I built it in three stages with the code running properly at the end of each stage. The first stage I wrote the code all in one index.js file, like MOD 9’s mini project. Next, I split it up into its respective parts per the assignment requirements. At this stage I used an asynchronous if-else statement to initialize the app without using an inquirer function. The final stage I removed the if-else statement from the asynchronous function and replaced it with an inquirer function. I also set some defaults for the question. So, I learned how to split up the initial code I developed into separate files and how to asynchronous function to run my code.  
-  
+
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## Table of contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contribute](#contribute)
-- [Test](#test)
-- [Questions](#questions)
-- [License](#license)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contribute](#contribute)
+*  [Test](#test)
+* [Questions](#questions)
+* [License](#license)
 
 ## Installation
 
