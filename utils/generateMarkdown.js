@@ -51,56 +51,57 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  # ${data.title}
+# ${data.title}
 
-  ## Description
-  ${data.description}
-  - ${data.motivation}
-  - ${data.build}
-  - ${data.problem}
-  - ${data.learned}
+## Description
+${data.description}
+
+- ${data.motivation}
+- ${data.build}
+- ${data.problem}
+- ${data.learned}
   
-  ${renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license)}
 
 
-  ## Table of contents
+## Table of contents
 
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Contribute](#contribute)
-  * [Test](#test)
-  * [Questions](#questions)
-  * [License](#license) 
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contribute](#contribute)
+* [Test](#test)
+* [Questions](#questions)
+* [License](#license) 
         
     
-  ## Installation
-  ${data.installation}
+## Installation
+${data.installation}
 
-  ## Usage
-  ${data.usage}
+## Usage
+${data.usage}
 
-  ## Contribute
-  ${data.contribute}
+## Contribute
+${data.contribute}
         
-  ## Test
-  ${data.test}
+## Test
+${data.test}
 
-  ## Questions
-  My Github profile can be located at <https://github.com/${data.userName}/>
+## Questions
+My Github profile can be located at <https://github.com/${data.userName}/>
 
-  You can email me with any questions at ${data.email}
+You can email me with any questions at ${data.email}
 
-  ![screenshot](/assets/images/${data.screenshot})
+![screenshot](/assets/images/${data.screenshot})
 
-  ## Credits
-  ${data.credits}
+## Credits
+${data.credits}
         
-  ## License
+## License
 
-  ${renderLicenseSection(data.license)}
+${renderLicenseSection(data.license)}
 
-  ${renderLicenseBadge(data.license)}
-  `;
+${renderLicenseBadge(data.license)}
+`;
 }
 
 export {generateMarkdown};
