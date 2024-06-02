@@ -54,6 +54,7 @@ function generateMarkdown(data) {
 # ${data.title}
 
 ## Description
+
 ${data.description}
 
 - ${data.motivation}
@@ -62,7 +63,6 @@ ${data.description}
 - ${data.learned}
 
 ${renderLicenseBadge(data.license)}
-
 
 ## Table of contents
 
