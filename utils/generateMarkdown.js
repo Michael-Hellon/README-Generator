@@ -60,42 +60,47 @@ ${data.description}
 - ${data.build}
 - ${data.problem}
 - ${data.learned}
-  
+
 ${renderLicenseBadge(data.license)}
 
 
 ## Table of contents
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contribute](#contribute)
-* [Test](#test)
-* [Questions](#questions)
-* [License](#license) 
-        
-    
+  [Installation](#installation)
+  [Usage](#usage)
+  [Contribute](#contribute)
+  [Test](#test)
+  [Questions](#questions)
+  [License](#license)
+
 ## Installation
+
 ${data.installation}
 
 ## Usage
+
 ${data.usage}
 
 ## Contribute
+
 ${data.contribute}
-        
+
 ## Test
+
 ${data.test}
 
 ## Questions
+
 My Github profile can be located at <https://github.com/${data.userName}/>
 
-You can email me with any questions at ${data.email}
+You can email me with any questions at <${data.email}>
 
 ![screenshot](/assets/images/${data.screenshot})
 
 ## Credits
+
 ${data.credits}
-        
+
 ## License
 
 ${renderLicenseSection(data.license)}
