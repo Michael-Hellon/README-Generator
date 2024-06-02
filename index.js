@@ -9,7 +9,7 @@ import {generateMarkdown} from "./utils/generateMarkdown.js";
 const questions = [
   {
     type: "input",
-    message: "Enter a Title for your Project. ",
+    message: "You can cut and paste from a word document\n Enter a Title for your Project. ",
     name: "title",
   },
   {
