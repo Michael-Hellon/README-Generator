@@ -39,7 +39,7 @@ Run the index.js file in the terminal and enter the questions. If all questions 
 
 ## Questions
 
-My Github profile can be located at <https://github.com/Michael-Hellon/>
+To see the full repo for this project please go to  <https://github.com/Michael-Hellon/README-Generator >
 
 You can email me with any questions at <mwhellon@yahoo.com>
 
@@ -47,10 +47,10 @@ You can email me with any questions at <mwhellon@yahoo.com>
 
 ## Credits
 
-I completed this project myself and used MOD 9’s mini-project as a guideline for this project.
+I completed this project myself and used MOD 9’s mini-project as a guideline for this project. I used several pages from MDN https://developer.mozilla.org/en-US/ as references for this project, to include the MDN async function page https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function.
 
 ## License
 
-To read more about the MIT license, click here ==> [License: MIT](https://opensource.org/licenses/MIT).
+To read more about the MIT license, please refer to the License in this repo or click here ==> [License: MIT](https://opensource.org/licenses/MIT).
 
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
